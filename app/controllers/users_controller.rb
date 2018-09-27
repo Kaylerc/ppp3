@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if @user.save
       msg = "Your account has been successfully created"
       p msg
-      redirect_to '/'
+      render 'show'
     else
       msg = "There was an error in creating your account.  Try again"
       p msg
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
 private
 
   def set_user
-    @user - USer.find(params[:id])
+    @user - User.find(params[:id])
   end
 
   def user_params

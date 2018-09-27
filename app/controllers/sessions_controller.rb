@@ -12,4 +12,11 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
+
+  def destroy
+    session[:user_id] = nil
+    log_out if logged_in?
+    p 'Logged out sucessfully'
+    redirect_to root_path
+  end
 end
