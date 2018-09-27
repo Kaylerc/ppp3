@@ -1,0 +1,26 @@
+<h1>Donations#index</h1>
+
+<li><%= link_to 'Post a New Donation', new_donation_path %></li>
+
+
+<div class="mainview">
+<h1>Donation Pickups</h1>
+  <div class="index-grid">
+    <% @donations.each  do |d| %><br>
+    <div class="index-cells-stu">
+      Last Name: &nbsp&nbsp<%= d.last_name %><br>
+      First Name: &nbsp &nbsp<%= d.first_name %><br>
+      Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= d.email %><br>
+      Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp<%= d.phone %><br>
+      Region: &nbsp &nbsp&nbsp <%= d.region %> <br>
+      Donation: &nbsp &nbsp&nbsp <%= d.donation %> <br>
+      Pick-up Location: &nbsp &nbsp&nbsp <%= d.pickup_location %> <br>
+      Pick_up Time: &nbsp &nbsp&nbsp <%= d.pickup_time %> <br>
+      Runner: &nbsp &nbsp&nbsp <%= d.runner %> <br>
+      Distributor: &nbsp &nbsp&nbsp <%= d.distributor %> <br>
+        <%= link_to "Edit", edit_donation_path(d.id) %>
+        <%= link_to "Create New", new_donation_path %><br>
+    </div>
+    <% end %>
+</div>
+</div>

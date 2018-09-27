@@ -1,12 +1,11 @@
 
   <%if logged_in? %>
-    <h1 class="titledown">Selfless</h1>
     <h1 class="home-welcome">Hey, <%= "#{current_user.first_name}"%> Welcome back!</h1>
-    <h1 class="home-welcome">Select an action:</h1>
+    <h1 class="home-welcome">Today I'll make an impact as a:</h1>
     <div class="login-home">
-      <%= link_to 'Donate', new_user_path %><br>
-      <%= link_to 'Run', new_user_path %><br>
-      <%= link_to 'Distribute', new_user_path %><br>
+      <%= link_to 'Donor', new_donation_path %><br>
+      <%= link_to 'Runner', new_user_path %><br>
+      <%= link_to 'Distributor', new_user_path %><br>
     </div>
     <% else %>
       <h1 class="titledown">Selfless</h1>

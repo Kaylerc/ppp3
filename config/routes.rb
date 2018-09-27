@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'pages#home'
 
   get 'register' => 'users#new'
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
 
 
   resources :users
-
+  resources :donations
 
   # get 'pages/home'
   # get 'users/new'
@@ -20,6 +21,11 @@ Rails.application.routes.draw do
   # get 'users/index'
   # get 'users/show'
   # get 'users/edit'
+
+  # get 'donations/new'
+  # get 'donations/edit'
+  # get 'donations/show'
+  # get 'donations/index'
 
   get 'pages/help'
   get 'pages/about'

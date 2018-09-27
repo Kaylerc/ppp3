@@ -1,0 +1,19 @@
+<h1>Donations#show</h1>
+
+    <h1>Donation</h1><br>
+    <%= link_to "Edit", edit_donation_path %><br>
+    <%= link_to "Donations Index", donations_path %><br>
+    <%= link_to "New Donation", new_donation_path %><br><br>
+
+    First Name: &nbsp&nbsp <%= @donation.first_name %> <br>
+    Last Name: &nbsp &nbsp <%= @donation.last_name %> <br>
+    Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= @donation.email %> <br>
+    Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp <%= @donation.phone %> <br>
+    Region: &nbsp &nbsp&nbsp <%= @donation.region %> <br>
+    Donation: &nbsp &nbsp&nbsp <%= @donation.donation %> <br>
+    Pick-up Location: &nbsp &nbsp&nbsp <%= @donation.pickup_location %> <br>
+    Pick_up Time: &nbsp &nbsp&nbsp <%= @donation.pickup_time %> <br>
+    Runner: &nbsp &nbsp&nbsp <%= @donation.runner %> <br>
+    Distributor: &nbsp &nbsp&nbsp <%= @donation.distributor %> <br>
+</div>
+</div>

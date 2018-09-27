@@ -1,0 +1,14 @@
+<%= form_for(@donation) do |f| %>
+  First Name:  <%= f.text_field :first_name, placeholder: 'First Name', required: true %><br>
+  Last Name: <%= f.text_field :last_name, placeholder: 'Last Name', required: true %><br>
+  Phone Numner: <%= f.telephone_field :phone, placeholder: 'Phone Number', required: true  %><br>
+  Region: <%= f.select :region, [['North Queens'], ['South Queens'], ['Uptown'], ['Downtown'], ['Midtown'], ['Harlem'], ['Bronx'],['Staten Island']] %><br>
+  Donation Description: <%= f.text_area  :donation, placeholder: 'What do you have to donate? (Please be specific so runner and distributor can porperly prepare)', required: true %><br>
+  Pick Up Location: <%= f.text_area :pickup_location %><br>
+  Pick Up Date: <%= f.date_field :pickup_date, required: true  %><br>
+  Pick Up Time: <%= f.time_field :pickup_time, required: true  %><br>
+  Runner: <%= f.text_field :runner, placeholder: 'Runner'%><br>
+  Distributor: <%= f.text_field  :distributor, placeholder: 'Distributor' %><br>
+
+    <%= f.submit %>
+<% end %>
